@@ -143,7 +143,7 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  mode: 'coming-soon',
+  mode: 'live',
   // mode: 'live',
   brand: {
     name: 'Klimcare',

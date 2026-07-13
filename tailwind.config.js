@@ -4,26 +4,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Light red primary ramp
+        // HDFC Bank Special Blue primary ramp
         primary: {
-          50: '#fff1f1',
-          100: '#ffe0e0',
-          200: '#ffc6c6',
-          300: '#ff9d9d',
-          400: '#ff6b6b',
-          500: '#f9444d',
-          600: '#ec1f2b',
-          700: '#c81420',
-          800: '#a5131e',
-          900: '#881520',
+          50: '#e8f1f9',
+          100: '#d4e3f4',
+          200: '#acc8ea',
+          300: '#75a3db',
+          400: '#3b7bc7',
+          500: '#004c8f', // Main Special Blue
+          600: '#003d73',
+          700: '#002d54',
+          800: '#001c36',
+          900: '#000c17',
         },
+        // HDFC Bank Funky Red accent ramp
         accent: {
           50: '#fff5f5',
-          100: '#ffe8e8',
-          200: '#ffd1d1',
-          300: '#ffb0b0',
-          400: '#ff8585',
-          500: '#ff5e5e',
+          100: '#ffe3e3',
+          200: '#ffbaba',
+          300: '#ff8f8f',
+          400: '#ff6060',
+          500: '#ED232A', // Main Funky Red
+          600: '#d31a21',
+          700: '#b01117',
+          800: '#911116',
+          900: '#781317',
         },
         neutral: {
           50: '#fafafa',
@@ -110,7 +115,7 @@ export default {
         },
       },
       backgroundImage: {
-        'hero-pattern': "radial-gradient(circle at 20% 50%, rgba(249,68,77,0.08), transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,157,157,0.1), transparent 50%)",
+        'hero-pattern': "radial-gradient(circle at 20% 50%, rgba(0,76,143,0.08), transparent 50%), radial-gradient(circle at 80% 20%, rgba(237,35,42,0.1), transparent 50%)",
       },
     },
   },
