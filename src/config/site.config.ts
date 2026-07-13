@@ -374,16 +374,16 @@ export const siteConfig: SiteConfig = {
         image:
           'https://images.pexels.com/photos/3933251/pexels-photo-3933251.jpeg?auto=compress&cs=tinysrgb&w=800',
       },
-      {
-        slug: 'client-feedback',
-        title: 'Client Feedback Loop',
-        short: 'Listening and acting to continuously elevate care.',
-        description:
-          'Client feedback is a cornerstone of our continuous improvement efforts. We consider every piece of feedback invaluable, as it provides insights into areas where we can enhance our services. We have established mechanisms to attentively listen to all feedback and ensure it is duly acted upon, driving us toward excellence in all aspects of our operations.',
-        icon: 'message-circle',
-        image:
-          'https://images.pexels.com/photos/262492/pexels-photo-262492.jpeg?auto=compress&cs=tinysrgb&w=800',
-      },
+      // {
+      //   slug: 'client-feedback',
+      //   title: 'Client Feedback Loop',
+      //   short: 'Listening and acting to continuously elevate care.',
+      //   description:
+      //     'Client feedback is a cornerstone of our continuous improvement efforts. We consider every piece of feedback invaluable, as it provides insights into areas where we can enhance our services. We have established mechanisms to attentively listen to all feedback and ensure it is duly acted upon, driving us toward excellence in all aspects of our operations.',
+      //   icon: 'message-circle',
+      //   image:
+      //     'https://images.pexels.com/photos/262492/pexels-photo-262492.jpeg?auto=compress&cs=tinysrgb&w=800',
+      // },
       {
         slug: 'round-the-clock',
         title: 'Available 24/7',
