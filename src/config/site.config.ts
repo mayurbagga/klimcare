@@ -429,7 +429,7 @@ export const siteConfig: SiteConfig = {
     address: '20, Wenlock Road, London, N1 7GU',
     hours: 'Mon - Fri: 8:00 AM - 6:00 PM',
     image:
-      'https://images.pexels.com/photos/262492/pexels-photo-262492.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/7551622/pexels-photo-7551622.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   footer: {
     quickLinks: [
