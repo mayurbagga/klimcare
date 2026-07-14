@@ -1,4 +1,4 @@
-import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { siteConfig } from '../config/site.config';
 
@@ -27,11 +27,12 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-2.5">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent-500 shadow-lg shadow-accent-500/30">
-                <Heart className="h-5 w-5 text-white" fill="currentColor" />
-              </div>
-              <span className="font-display text-xl font-bold text-white">{siteConfig.brand.logoText}</span>
+            <Link to="/" className="inline-block">
+              <img
+                src={siteConfig.brand.logo}
+                alt="Klimcare Logo"
+                className="h-16 w-auto max-w-[200px] object-contain rounded-xl bg-white p-1.5 shadow-lg shadow-primary-500/10"
+              />
             </Link>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-primary-300">{f.description}</p>
 

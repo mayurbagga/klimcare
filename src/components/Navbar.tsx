@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Heart, Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { siteConfig } from '../config/site.config';
 
 export function Navbar() {
@@ -19,9 +19,6 @@ export function Navbar() {
     setOpen(false);
   }, [location.pathname]);
 
-  const isHome = location.pathname === '/';
-  const transparent = isHome && !scrolled && !open;
-
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
@@ -32,13 +29,12 @@ export function Navbar() {
     >
       <nav className="container-px mx-auto flex max-w-7xl items-center justify-between py-4">
         {/* Logo */}
-        <Link to="/" className="group flex items-center gap-2.5">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white shadow-md shadow-primary-500/10 transition-transform duration-300 group-hover:scale-110">
-            <img src="/logo.png" alt="Klimcare Logo" className="h-8 w-8 object-contain" />
-          </div>
-          <span className={`font-display text-xl font-bold transition-colors text-white`}>
-            {siteConfig.brand.logoText}
-          </span>
+        <Link to="/" className="group flex items-center">
+          <img
+            src={siteConfig.brand.logo}
+            alt="Klimcare Logo"
+            className="h-14 w-auto max-w-[180px] object-contain rounded-xl bg-white p-1 shadow-md shadow-primary-500/10 transition-transform duration-300 group-hover:scale-105"
+          />
         </Link>
 
         {/* Desktop nav */}

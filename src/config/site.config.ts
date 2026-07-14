@@ -39,6 +39,7 @@ export interface SiteConfig {
     name: string;
     tagline: string;
     logoText: string;
+    logo: string;
   };
   comingSoon: {
     title: string;
@@ -149,6 +150,7 @@ export const siteConfig: SiteConfig = {
     name: 'Klimcare',
     tagline: 'Compassion. Excellence. Care.',
     logoText: 'Klimcare',
+    logo: '/klimlogo.jpeg',
   },
   comingSoon: {
     title: 'Something Caring is Coming',

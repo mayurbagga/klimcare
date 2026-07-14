@@ -74,10 +74,11 @@ export function ComingSoon() {
       <div className="relative z-10 w-full max-w-3xl text-center">
         {/* Logo / brand */}
         <div className="mb-8 flex flex-col items-center gap-3 animate-fade-in-down">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-500 shadow-lg shadow-primary-500/40 animate-pulse-soft">
-            <Activity className="h-7 w-7 text-white" />
-          </div>
-          <span className="font-decorative text-3xl font-bold text-neutral-900">{cs.subtitle}</span>
+          <img
+            src={siteConfig.brand.logo}
+            alt="Klimcare Logo"
+            className="h-24 w-auto max-w-[280px] object-contain rounded-2xl bg-white p-2 shadow-lg shadow-primary-500/20 animate-pulse-soft"
+          />
         </div>
 
         {/* Badge */}
