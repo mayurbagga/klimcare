@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logo Filter Comparison</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: #f0f4f8;
+    }
+    .comparison-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      flex: 1;
+      min-width: 250px;
+    }
+    .bg-dark {
+      background-color: #004c8f; /* Klimcare primary-500 */
+      color: white;
+    }
+    .bg-dark-scrolled {
+      background-color: #003d73; /* Klimcare primary-600 */
+      color: white;
+    }
+    .bg-footer {
+      background-color: #000c17; /* Klimcare primary-900 */
+      color: white;
+    }
+    img {
+      max-height: 60px;
+      display: block;
+      margin-top: 10px;
+      object-fit: contain;
+    }
+    .filter-white {
+      filter: brightness(0) invert(1);
+    }
+    /* Let's also try a version with slight transparency or soft white */
+    .filter-soft-white {
+      filter: brightness(0) invert(0.9);
+    }
+  </style>
+</head>
+<body>
+  <h1>Klimcare Logo Visibility Testing</h1>
+  
+  <h2>1. Current Implementation (White Box background)</h2>
+  <div class="comparison-container">
+    <div class="card bg-dark">
+      <h3>Navbar (Unscrolled) with klimlogo.jpeg (p-1 bg-white)</h3>
+      <div style="padding: 10px;">
+        <img src="/klimlogo.jpeg" style="background-color: white; padding: 4px; border-radius: 12px;" alt="klimlogo">
+      </div>
+    </div>
+    <div class="card bg-dark-scrolled">
+      <h3>Navbar (Scrolled) with klimlogo.jpeg (p-1 bg-white)</h3>
+      <div style="padding: 10px;">
+        <img src="/klimlogo.jpeg" style="background-color: white; padding: 4px; border-radius: 12px;" alt="klimlogo">
+      </div>
+    </div>
+  </div>
+
+  <h2>2. Using logo.png (Transparent) with CSS Filters on Dark Backgrounds</h2>
+  <div class="comparison-container">
+    <div class="card bg-dark">
+      <h3>Navbar (Unscrolled) - logo.png (Pure White Filter)</h3>
+      <div style="padding: 10px;">
+        <img src="/logo.png" class="filter-white" alt="logo white">
+      </div>
+    </div>
+    <div class="card bg-dark-scrolled">
+      <h3>Navbar (Scrolled) - logo.png (Pure White Filter)</h3>
+      <div style="padding: 10px;">
+        <img src="/logo.png" class="filter-white" alt="logo white">
+      </div>
+    </div>
+    <div class="card bg-footer">
+      <h3>Footer - logo.png (Soft White Filter)</h3>
+      <div style="padding: 10px;">
+        <img src="/logo.png" class="filter-soft-white" alt="logo soft white">
+      </div>
+    </div>
+  </div>
+
+  <h2>3. Raw logo.png without filters (for reference)</h2>
+  <div class="comparison-container">
+    <div class="card bg-dark" style="background-color: white; color: black;">
+      <h3>On White Background (Raw colors)</h3>
+      <img src="/logo.png" alt="logo raw">
+    </div>
+    <div class="card bg-dark">
+      <h3>On Dark Background (No filter - hard to see)</h3>
+      <img src="/logo.png" alt="logo raw on dark">
+    </div>
+  </div>
+</body>
+</html>

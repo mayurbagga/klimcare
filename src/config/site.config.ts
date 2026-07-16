@@ -427,8 +427,8 @@ export const siteConfig: SiteConfig = {
     description:
       "Whether you're a healthcare facility seeking reliable staffing or a family looking for compassionate care, our team is ready to help you find the perfect match.",
     email: 'info@klimcare.co.uk',
-    phone: '0208 0642491',
-    address: '20, Wenlock Road, London, N1 7GU',
+    phone: '',
+    address: '5 Bankfield Road Sale M33 5QD UK',
     hours: 'Mon - Fri: 8:00 AM - 6:00 PM',
     image:
       'https://images.pexels.com/photos/7551622/pexels-photo-7551622.jpeg?auto=compress&cs=tinysrgb&w=1200',
