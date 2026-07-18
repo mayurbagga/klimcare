@@ -21,11 +21,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled || open
-          ? 'bg-primary-600/95 shadow-lg shadow-primary-950/20 backdrop-blur-md'
-          : 'bg-primary-500 shadow-md'
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled || open
+        ? 'bg-primary-600/95 shadow-lg shadow-primary-950/20 backdrop-blur-md'
+        : 'bg-primary-500 shadow-md'
+        }`}
     >
       <nav className="container-px mx-auto flex max-w-7xl items-center justify-between py-4">
         {/* Logo */}
@@ -33,7 +32,7 @@ export function Navbar() {
           <img
             src={siteConfig.brand.logo}
             alt="Klimcare Logo"
-            className="h-14 w-auto max-w-[180px] object-contain rounded-xl bg-white p-1 shadow-md shadow-primary-500/10 transition-transform duration-300 group-hover:scale-105"
+            className="h-16 w-auto max-w-[200px] object-contain rounded-xl bg-white p-1 shadow-md shadow-primary-500/10 transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
 
@@ -45,17 +44,15 @@ export function Navbar() {
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 ${
-                    active
-                      ? 'text-white'
-                      : 'text-primary-100 hover:text-white hover:bg-primary-600/40'
-                  }`}
+                  className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 ${active
+                    ? 'text-white'
+                    : 'text-primary-100 hover:text-white hover:bg-primary-600/40'
+                    }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent-500 transition-all duration-300 ${
-                      active ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
-                    }`}
+                    className={`absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent-500 transition-all duration-300 ${active ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+                      }`}
                   />
                 </Link>
               </li>
@@ -90,9 +87,8 @@ export function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden transition-all duration-500 lg:hidden ${
-          open ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
-        }`}
+        className={`overflow-hidden transition-all duration-500 lg:hidden ${open ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
+          }`}
       >
         <div className="container-px mx-auto max-w-7xl border-t border-primary-600 bg-primary-600/95 py-4 backdrop-blur-md">
           <ul className="flex flex-col gap-1">
@@ -106,9 +102,8 @@ export function Navbar() {
                 >
                   <Link
                     to={link.path}
-                    className={`w-full rounded-xl px-4 py-3 text-left text-sm font-medium transition-colors block ${
-                      active ? 'bg-primary-700 text-white' : 'text-primary-100 hover:bg-primary-700/50 hover:text-white'
-                    }`}
+                    className={`w-full rounded-xl px-4 py-3 text-left text-sm font-medium transition-colors block ${active ? 'bg-primary-700 text-white' : 'text-primary-100 hover:bg-primary-700/50 hover:text-white'
+                      }`}
                   >
                     {link.label}
                   </Link>

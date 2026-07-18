@@ -150,7 +150,7 @@ export const siteConfig: SiteConfig = {
     name: 'Klimcare',
     tagline: 'Compassion. Excellence. Care.',
     logoText: 'Klimcare',
-    logo: '/klimlogo.jpeg',
+    logo: '/klimlogo.jpg',
   },
   comingSoon: {
     title: 'Something Caring is Coming',
