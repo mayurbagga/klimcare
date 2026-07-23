@@ -20,8 +20,9 @@ export function ContactPage() {
   const infoItems = [
     { icon: MapPin, label: 'Location', value: c.address },
     { icon: Mail, label: 'Email', value: c.email, href: `mailto:${c.email}` },
-    { icon: Phone, label: 'Phone Number', value: c.phone, href: `tel:${c.phone}` },
+    { icon: Phone, label: 'Phone Number', value: c.phone, href: `tel:${c.phone.replace(/\s+/g, '')}` },
     { icon: Clock, label: 'Working Hours', value: c.hours },
+    { icon: Clock, label: 'Out of Hours Support', value: c.outOfHours },
   ];
 
   return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { siteConfig } from '../config/site.config';
 
 export function Navbar() {
@@ -39,7 +39,53 @@ export function Navbar() {
         {/* Desktop nav */}
         <ul className="hidden items-center gap-1 lg:flex">
           {siteConfig.nav.map((link) => {
-            const active = location.pathname === link.path;
+            const hasChildren = !!link.children;
+            const active = hasChildren
+              ? link.children?.some(c => location.pathname === c.path)
+              : location.pathname === link.path;
+
+            if (hasChildren) {
+              return (
+                <li key={link.label} className="group relative">
+                  <button
+                    className={`flex items-center gap-1 relative rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 ${active
+                      ? 'text-white'
+                      : 'text-primary-100 hover:text-white hover:bg-primary-600/40'
+                      }`}
+                  >
+                    {link.label}
+                    <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+                    <span
+                      className={`absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent-500 transition-all duration-300 ${active ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+                        }`}
+                    />
+                  </button>
+
+                  {/* Desktop Dropdown Menu */}
+                  <div className="invisible opacity-0 absolute left-1/2 -translate-x-1/2 top-full mt-2 w-56 rounded-2xl border border-neutral-100 bg-white p-2.5 shadow-xl transition-all duration-300 origin-top scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100 z-50">
+                    <ul className="flex flex-col gap-1">
+                      {link.children?.map((child) => {
+                        const childActive = location.pathname === child.path;
+                        return (
+                          <li key={child.path}>
+                            <Link
+                              to={child.path}
+                              className={`block w-full rounded-xl px-4 py-2.5 text-left text-sm font-semibold transition-colors ${childActive
+                                ? 'bg-primary-50 text-primary-600'
+                                : 'text-neutral-700 hover:bg-neutral-50 hover:text-primary-600'
+                                }`}
+                            >
+                              {child.label}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </li>
+              );
+            }
+
             return (
               <li key={link.path}>
                 <Link
@@ -63,7 +109,7 @@ export function Navbar() {
         {/* CTA + mobile toggle */}
         <div className="flex items-center gap-3">
           <a
-            href={`tel:${siteConfig.contact.phone}`}
+            href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
             className={`hidden items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors md:flex bg-primary-600 text-primary-50 hover:bg-primary-700`}
           >
             <Phone className="h-3.5 w-3.5" />
@@ -93,7 +139,39 @@ export function Navbar() {
         <div className="container-px mx-auto max-w-7xl border-t border-primary-600 bg-primary-600/95 py-4 backdrop-blur-md">
           <ul className="flex flex-col gap-1">
             {siteConfig.nav.map((link, i) => {
-              const active = location.pathname === link.path;
+              const hasChildren = !!link.children;
+              const active = hasChildren
+                ? link.children?.some(c => location.pathname === c.path)
+                : location.pathname === link.path;
+
+              if (hasChildren) {
+                return (
+                  <li key={link.label} className="flex flex-col gap-1">
+                    <div
+                      className={`w-full rounded-xl px-4 py-2 text-left text-xs font-bold uppercase tracking-wider text-primary-300 mt-2`}
+                    >
+                      {link.label}
+                    </div>
+                    <ul className="flex flex-col gap-1 pl-4 border-l border-primary-500/40 ml-4 mb-2">
+                      {link.children?.map((child) => {
+                        const childActive = location.pathname === child.path;
+                        return (
+                          <li key={child.path}>
+                            <Link
+                              to={child.path}
+                              className={`w-full rounded-xl px-4 py-3 text-left text-sm font-medium transition-colors block ${childActive ? 'bg-primary-700 text-white' : 'text-primary-100 hover:bg-primary-700/50 hover:text-white'
+                                }`}
+                            >
+                              {child.label}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </li>
+                );
+              }
+
               return (
                 <li
                   key={link.path}

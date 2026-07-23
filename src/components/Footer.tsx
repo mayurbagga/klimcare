@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { siteConfig } from '../config/site.config';
 
@@ -24,9 +24,9 @@ export function Footer() {
       </div>
 
       <div className="container-px relative z-10 mx-auto max-w-7xl py-16">
-        <div className="grid gap-10 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
-          <div className="lg:col-span-2">
+          <div>
             <Link to="/" className="inline-block">
               <img
                 src={siteConfig.brand.logo}
@@ -34,7 +34,7 @@ export function Footer() {
                 className="h-16 w-auto max-w-[200px] object-contain rounded-xl bg-white p-1.5 shadow-lg shadow-primary-500/10"
               />
             </Link>
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-primary-300">{f.description}</p>
+            <p className="mt-5 text-sm leading-relaxed text-primary-300">{f.description}</p>
 
             <div className="mt-6 flex items-center gap-3">
               {socials.map((s) => (
@@ -68,21 +68,49 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* We Provide */}
           <div>
-            <h3 className="font-display text-sm font-bold uppercase tracking-wider text-white">Contact Us</h3>
+            <h3 className="font-display text-sm font-bold uppercase tracking-wider text-white">We Provide</h3>
+            <ul className="mt-5 space-y-3">
+              {f.services.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="group flex items-center gap-2 text-sm text-primary-300 transition-colors hover:text-accent-400"
+                  >
+                    <span className="h-px w-0 bg-accent-500 transition-all duration-300 group-hover:w-4" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="font-display text-sm font-bold uppercase tracking-wider text-white">Contact Info</h3>
             <ul className="mt-5 space-y-4">
+              <li className="text-sm font-bold text-white">
+                {siteConfig.brand.name}
+              </li>
               <li className="flex items-start gap-3 text-sm text-primary-300">
                 <Mail className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-500" />
                 <a href={`mailto:${c.email}`} className="transition-colors hover:text-accent-400">{c.email}</a>
               </li>
               <li className="flex items-start gap-3 text-sm text-primary-300">
                 <Phone className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-500" />
-                <a href={`tel:${c.phone}`} className="transition-colors hover:text-accent-400">{c.phone}</a>
+                <a href={`tel:${c.phone.replace(/\s+/g, '')}`} className="transition-colors hover:text-accent-400">{c.phone}</a>
               </li>
               <li className="flex items-start gap-3 text-sm text-primary-300">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-500" />
                 {c.address}
+              </li>
+              <li className="flex items-start gap-3 text-sm text-primary-300">
+                <Clock className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-500" />
+                <div>
+                  <div>{c.hours}</div>
+                  <div className="mt-0.5 text-xs text-accent-400 font-semibold">{c.outOfHours}</div>
+                </div>
               </li>
             </ul>
           </div>

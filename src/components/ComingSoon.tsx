@@ -140,7 +140,7 @@ export function ComingSoon() {
 
         {/* Socials */}
         <div className="mt-12 flex items-center justify-center gap-3 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
-          {cs.socials.map((s) => {
+          {cs.socials.map((s: any) => {
             const Icon = socialIconMap[s.icon] ?? Activity;
             return (
               <a

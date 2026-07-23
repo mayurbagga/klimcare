@@ -5,11 +5,14 @@ import { Layout } from './components/Layout';
 import { ScrollToTop } from './components/ScrollToTop';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
-import { MissionPage } from './pages/MissionPage';
-import { ValuesPage } from './pages/ValuesPage';
+import { WhyChoosePage } from './pages/WhyChoosePage';
 import { ServicesPage } from './pages/ServicesPage';
-import { StaffPage } from './pages/StaffPage';
+import { EmployersPage } from './pages/EmployersPage';
+import { CandidatesPage } from './pages/CandidatesPage';
 import { ContactPage } from './pages/ContactPage';
+import { HealthcareAssistantPage } from './pages/HealthcareAssistantPage';
+import { SeniorHealthcareAssistantPage } from './pages/SeniorHealthcareAssistantPage';
+import { HousekeepingStaffPage } from './pages/HousekeepingStaffPage';
 
 function App() {
   if (siteConfig.mode === 'coming-soon') {
@@ -23,10 +26,13 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/mission" element={<MissionPage />} />
-          <Route path="/values" element={<ValuesPage />} />
+          <Route path="/why-choose" element={<WhyChoosePage />} />
           <Route path="/services" element={<ServicesPage />} />
-          <Route path="/staff" element={<StaffPage />} />
+          <Route path="/services/healthcare-assistant" element={<HealthcareAssistantPage />} />
+          <Route path="/services/senior-healthcare-assistant" element={<SeniorHealthcareAssistantPage />} />
+          <Route path="/services/housekeeping-staff" element={<HousekeepingStaffPage />} />
+          <Route path="/employers" element={<EmployersPage />} />
+          <Route path="/candidates" element={<CandidatesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
