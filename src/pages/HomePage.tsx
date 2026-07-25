@@ -141,7 +141,7 @@ export function HomePage() {
                       ? "btn-primary w-full sm:w-auto"
                       : i === 1
                         ? "btn-secondary w-full sm:w-auto bg-neutral-800 text-white border-neutral-700 hover:bg-neutral-700"
-                        : "btn-secondary w-full sm:w-auto border-neutral-700 text-neutral-300 hover:text-white hover:bg-neutral-800"
+                        : "btn-secondary w-full sm:w-auto border-neutral-700 text-neutral-800 hover:text-white hover:bg-neutral-800"
                   }
                 >
                   {i === 2 && <Phone className="h-3.5 w-3.5" />}
