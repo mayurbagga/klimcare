@@ -121,7 +121,7 @@ export function HomePage() {
             <span className="eyebrow bg-primary-500/10 border-primary-500/20 text-primary-400 mb-5">Get Started</span>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl">
+            <h2 className="mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl text-white">
               {home.cta.title}
             </h2>
           </Reveal>
@@ -141,7 +141,7 @@ export function HomePage() {
                       ? "btn-primary w-full sm:w-auto"
                       : i === 1
                       ? "btn-secondary w-full sm:w-auto bg-neutral-800 text-white border-neutral-700 hover:bg-neutral-700"
-                      : "btn-secondary w-full sm:w-auto border-neutral-700 text-neutral-300 hover:text-white hover:bg-neutral-800"
+                      : "btn-secondary w-full sm:w-auto bg-transparent border-neutral-700 text-neutral-300 hover:text-white hover:bg-neutral-800"
                   }
                 >
                   {i === 2 && <Phone className="h-3.5 w-3.5" />}

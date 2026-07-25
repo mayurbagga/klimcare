@@ -190,7 +190,7 @@ export const siteConfig: SiteConfig = {
       subHeading: 'Connecting Exceptional Healthcare Professionals with Organisations That Care',
       paragraphs: [
         'At Klim Care Limited, we understand that outstanding healthcare begins with exceptional people. Every healthcare organisation relies on skilled, compassionate, and dependable professionals to deliver safe, high-quality care. Our mission is to bridge the gap between talented healthcare professionals and organisations that are committed to making a positive difference in people\'s lives.',
-        'We are a specialist healthcare recruitment and staffing agency dedicated to supporting NHS trusts, private hospitals, nursing homes, residential care homes, supported living providers, Live in Care, mental health organisations, learning disability services, rehabilitation centres, & hospices, across the England.',
+        'We are a specialist healthcare recruitment and staffing agency dedicated to supporting NHS trusts, private hospitals, nursing homes, residential care homes, supported living providers, and Live in Care across England.',
         'Whether you require emergency Short term or Long Term staffing support, workforce planning solutions, Klim Care Limited provides reliable recruitment services tailored to your organisation\'s unique requirements.',
         'For healthcare professionals, we offer rewarding career opportunities, flexible working arrangements, competitive pay, ongoing support, and placements with respected healthcare providers where your skills and compassion can make a genuine impact.',
         'At Klim Care Limited, we don\'t simply recruit people—we build lasting partnerships founded on professionalism, integrity, trust, and a shared commitment to delivering exceptional care.'
@@ -203,8 +203,8 @@ export const siteConfig: SiteConfig = {
       title: 'Ready to Strengthen Your Healthcare Workforce?',
       description: 'Whether you are looking to recruit exceptional healthcare professionals or take the next step in your healthcare career, Klim Care Limited is here to help. Partner with Klim Care Limited today and discover a recruitment service built on trust, quality, and long-term success.',
       buttons: [
-        { label: 'Request Staff', path: '/employers' },
-        { label: 'Find Healthcare Jobs', path: '/candidates' },
+        { label: 'Request Staff', path: '/contact' },
+        { label: 'Find Healthcare Jobs', path: '/contact' },
         { label: 'Speak to a Recruitment Consultant', path: '/contact' }
       ]
     }
@@ -313,14 +313,6 @@ export const siteConfig: SiteConfig = {
         description: 'Senior Healthcare Assistants (SHCAs) combine clinical skill with leadership. They are responsible for implementing care plans, administering medication under supervision, assisting with complex client needs, and overseeing junior care staff, ensuring high standards of safety and compliance.',
         icon: 'stethoscope',
         image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=800'
-      },
-      {
-        slug: 'housekeeping-staff',
-        title: 'Housekeeping Staff',
-        short: 'Maintaining clean, safe, and hygienic environments.',
-        description: 'Our housekeeping staff are vital to maintaining standard hygiene protocols in healthcare environments. Trained in infection control, clinical cleanliness, waste disposal, and inventory management, they ensure a safe, sanitary, and organized space for staff and patients.',
-        icon: 'home',
-        image: 'https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=800'
       }
     ],
     sectors: {
@@ -332,15 +324,7 @@ export const siteConfig: SiteConfig = {
         'Residential Care Homes',
         'Nursing Homes',
         'Supported Living Services',
-        'Live in Care Services',
-        'House Keeping staff',
-        'Mental Health Services',
-        'Learning Disability Services',
-        'Children\'s Services',
-        'Rehabilitation Centres',
-        'Specialist Care Providers',
-        'Hospices',
-        'Complex Care Services'
+        'Live in Care Services'
       ]
     }
   },
@@ -394,7 +378,7 @@ export const siteConfig: SiteConfig = {
     faqs: [
       {
         question: 'What healthcare roles do you recruit for?',
-        answer: 'We recruit Healthcare Assistants, Support Workers, Live in Carer, Housekeeping staff, Senior Carers, Team Leaders, Mental Health Professionals, Learning Disability Support Workers, and many other healthcare roles.'
+        answer: 'We recruit Healthcare Assistants, Support Workers, Live in carers and Nurses'
       },
       {
         question: 'Do you provide long term recruitment?',
@@ -430,7 +414,6 @@ export const siteConfig: SiteConfig = {
     services: [
       { label: 'Healthcare Assistant', path: '/services/healthcare-assistant' },
       { label: 'Senior Healthcare Assistant', path: '/services/senior-healthcare-assistant' },
-      { label: 'Housekeeping Staff', path: '/services/housekeeping-staff' },
     ],
     description: 'Klim Care Limited — Delivering Exceptional Healthcare Professionals Across the England. Built on Trust, Compassion and Excellence.',
   },

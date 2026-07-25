@@ -12,7 +12,6 @@ import { CandidatesPage } from './pages/CandidatesPage';
 import { ContactPage } from './pages/ContactPage';
 import { HealthcareAssistantPage } from './pages/HealthcareAssistantPage';
 import { SeniorHealthcareAssistantPage } from './pages/SeniorHealthcareAssistantPage';
-import { HousekeepingStaffPage } from './pages/HousekeepingStaffPage';
 
 function App() {
   if (siteConfig.mode === 'coming-soon') {
@@ -30,7 +29,6 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/healthcare-assistant" element={<HealthcareAssistantPage />} />
           <Route path="/services/senior-healthcare-assistant" element={<SeniorHealthcareAssistantPage />} />
-          <Route path="/services/housekeeping-staff" element={<HousekeepingStaffPage />} />
           <Route path="/employers" element={<EmployersPage />} />
           <Route path="/candidates" element={<CandidatesPage />} />
           <Route path="/contact" element={<ContactPage />} />

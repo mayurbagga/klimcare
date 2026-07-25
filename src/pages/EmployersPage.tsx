@@ -64,7 +64,7 @@ export function EmployersPage() {
                 </span>
               </Reveal>
               <Reveal delay={100}>
-                <h2 className="mt-5 font-display text-3xl font-bold leading-tight sm:text-4xl">
+                <h2 className="mt-5 font-display text-3xl font-bold leading-tight sm:text-4xl text-white">
                   {emp.compliance.title}
                 </h2>
               </Reveal>
@@ -134,7 +134,7 @@ export function EmployersPage() {
             </span>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl">
+            <h2 className="mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl text-white">
               Request Care & Nursing Staff Today
             </h2>
           </Reveal>

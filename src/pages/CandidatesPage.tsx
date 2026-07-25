@@ -120,7 +120,7 @@ export function CandidatesPage() {
             </span>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl">
+            <h2 className="mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl text-white">
               Ready to Join the Klim Care Family?
             </h2>
           </Reveal>

@@ -67,7 +67,7 @@ export function HealthcareAssistantPage() {
       {/* Mini CTA */}
       <section className="relative overflow-hidden bg-primary-950 py-16 text-white text-center">
         <div className="container-px mx-auto max-w-xl">
-          <h2 className="font-display text-2xl font-bold mb-4">Need Healthcare Assistants?</h2>
+          <h2 className="font-display text-2xl font-bold mb-4 text-white">Need Healthcare Assistants?</h2>
           <p className="text-neutral-300 text-sm mb-6">
             Get in touch to request fully compliant Healthcare Assistants for your ward or residential facility.
           </p>
